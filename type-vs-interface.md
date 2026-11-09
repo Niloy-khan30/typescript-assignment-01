@@ -1,10 +1,10 @@
->Title : What are the core differences between type aliases and interface in typescript ? When should we use choose one over other?
+**Title** : What are the core differences between type aliases and interface in typescript ? When should we use choose one over other?
 
->Introduction 
+**Introduction** 
 
 Type aliases and Interface both are used to define custom data types. they give us type safety and the structure of objects in Typescript.Despite of having similarities they have some important differences.
 
->Interface 
+**Interface** 
 
 An interface is used for describing the structure of objects. It ensure which properties and method an object should contain. such as;
 
@@ -20,7 +20,7 @@ const user : User {
     dept : 'CSE'
 }
 
->Type alias 
+**Type alias**
 
 Type alias is used to create a name for any type including objects , literal, unions, intersections and tuple 
 
@@ -39,7 +39,7 @@ Though both of them supports object structure but primitive types, unions types 
 
 for intersection types interface uses 'Extends' and Type alias uses '&'.Interface supports declaration marging meaning if two interface have the same name, typescript combine their properties which is not allowed in case of type alias.
 
->Extending types 
+**Extending types** 
 
 interface Person {
     name: string;
@@ -57,7 +57,7 @@ type Student = Person & {
     studentId: number;
 }
 
->Declaration merging 
+**Declaration merging** 
 
 interface Student {
     id: number;
@@ -73,6 +73,6 @@ const student: Student = {
 };
 
 
->Conclusion
+**Conclusion**
 
 We use interface when defining object, moreover when we expect them to be extended of merged. Type alias should be used when working with unions, intersections, tuples or more complex type combinations. Both are useful depending on the requirement.
