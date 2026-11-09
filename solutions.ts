@@ -2,7 +2,7 @@ const multiplyValue = (val1:number, val2:number = 2): number =>{
     return val1 * val2
 }
 
-// console.log(multiplyValue(7, 0))
+console.log(multiplyValue(7, 0))
 
 
 const processInput = (value:string|number|boolean)=>{
@@ -25,17 +25,17 @@ const processInput = (value:string|number|boolean)=>{
     }
 }
 
-// console.log(processInput("  TypeScript  "));
-// console.log(processInput(7));
-// console.log(processInput(true));
-// console.log(processInput(false));
+console.log(processInput("  TypeScript  "));
+console.log(processInput(7));
+console.log(processInput(true));
+console.log(processInput(false));
 
 
 const formatCoordinate = (coordinate : readonly [number, number, string]) : string =>{
     return `Location: ${coordinate[2]} (${coordinate[0]}, ${coordinate[1]})`
 }
 
-// console.log(formatCoordinate([22.35, 91.78, "Chittagong"]))
+console.log(formatCoordinate([22.35, 91.78, "Chittagong"]))
 
 
 const concatenateArrays = <T>(...arrays : T[][]) : T[] =>{
@@ -46,8 +46,8 @@ const concatenateArrays = <T>(...arrays : T[][]) : T[] =>{
     return result
 }
 
-// concatenateArrays([1, 2], [3, 4], [5])
-// concatenateArrays(["a", "b"], ["c", "d"]);
+concatenateArrays([1, 2], [3, 4], [5])
+concatenateArrays(["a", "b"], ["c", "d"]);
 
 interface Course {
     title : string
@@ -71,7 +71,7 @@ const courses = [
   { title: "Basic HTML", students: 45, isPublished: true },
   { title: "Next.js Pro", students: 85, isPublished: true }
 ];
-// console.log(getPopularCourses(courses, 80))
+console.log(getPopularCourses(courses, 80))
 
 
 const pluckValues = <T, K extends keyof T>(items : T[], key:K) =>{
@@ -84,14 +84,14 @@ const pluckValues = <T, K extends keyof T>(items : T[], key:K) =>{
     return result
 }
 
-// const users = [
-//   { id: 1, name: "Rakib", role: "Admin" },
-//   { id: 2, name: "Sadia", role: "Editor" },
-//   { id: 3, name: "Tariq", role: "Subscriber" }
-// ];
+const users = [
+  { id: 1, name: "Rakib", role: "Admin" },
+  { id: 2, name: "Sadia", role: "Editor" },
+  { id: 3, name: "Tariq", role: "Subscriber" }
+];
 
-// console.log(pluckValues(users, "name"));
-// console.log(pluckValues(users, "id"));
+console.log(pluckValues(users, "name"));
+console.log(pluckValues(users, "id"));
 
 class Employee {
     constructor(
@@ -119,8 +119,8 @@ class Manager extends Employee {
 }
 
 const manager = new Manager("Alice", 50000, "Engineering");
-// console.log(manager.getDetails());
-// console.log(manager.getRoleInfo());
+console.log(manager.getDetails());
+console.log(manager.getRoleInfo());
 
 
 const validateAgeAsync = async(age:number) : Promise<string> =>{
